@@ -1,0 +1,14 @@
+<footer id="footer">
+  <div class="footer-left">
+    &copy; {{ config.extra.copyright | default(value=config.title) }} {{ now() | date(format="%Y") }}.
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        {% for item in config.extra.menu | default(value=[]) %}
+        <li><a href="{{ item.url | safe }}">{{ item.name }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</footer>

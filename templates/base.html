@@ -9,7 +9,11 @@
 </head>
 <body class="max-width mx-auto px3 ltr">
   <div class="content index py4">
-    {% block content %}{% endblock %}
+    {% include "partials/header.html" %}
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+    {% include "partials/footer.html" %}
   </div>
 </body>
 </html>
