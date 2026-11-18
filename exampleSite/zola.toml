@@ -13,6 +13,7 @@ theme = "catppuccin-mocha"
 description = "A Cactus-like theme for Zola."
 copyright = "Cactus Nova"
 profile_avatar = "images/avatar.png"
+wordmark = 'Cactus Nova <span class="wordmark-meta">[example.com@main]</span> ~'
 
 menu = [
   { name = "Home", url = "/" },

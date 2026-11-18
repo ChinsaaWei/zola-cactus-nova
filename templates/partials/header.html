@@ -1,7 +1,7 @@
 <header id="header">
   <a href="{{ config.base_url }}">
     <div id="title">
-      <h1>{{ config.title }}</h1>
+      <h1>{{ config.extra.wordmark | default(value=config.title) | safe }}</h1>
     </div>
   </a>
   <div id="nav">
