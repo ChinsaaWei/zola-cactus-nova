@@ -1,15 +1,15 @@
 @font-face {
   font-style: normal;
   font-weight: 400;
-  font-family: "JetBrains Mono";
+  font-family: "Sarasa Mono SC";
   font-display: swap;
-  src: local("JetBrains Mono"), local("JetBrains-Mono"), url("../lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2") format("woff2"), url("../lib/JetBrainsMono/web/woff/JetBrainsMono-Regular.woff") format("woff"), url("../lib/JetBrainsMono/ttf/JetBrainsMono-Regular.ttf") format("truetype");
-};
+  src: url("../fonts/SarasaMonoSC-Regular.woff2") format("woff2");
+}
 
 @font-face {
   font-style: normal;
   font-weight: 700;
-  font-family: "JetBrains Mono";
+  font-family: "Sarasa Mono SC";
   font-display: swap;
-  src: local("JetBrains Mono Bold"), local("JetBrainsMono-Bold"), url("../lib/JetBrainsMono/web/woff2/JetBrainsMono-Bold.woff2") format("woff2"), url("../lib/JetBrainsMono/web/woff/JetBrainsMono-Bold.woff") format("woff"), url("../lib/JetBrainsMono/ttf/JetBrainsMono-Bold.ttf") format("truetype");
-};
+  src: url("../fonts/SarasaMonoSC-Bold.woff2") format("woff2");
+}

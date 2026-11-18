@@ -35,9 +35,6 @@ body {
   min-height: 100%;
   overflow-wrap: break-word;
 
-  p {
-    @include hyphens(auto);
-  }
   code {
     @include hyphens(manual);
   }
@@ -119,12 +116,6 @@ body {
   }
 }
 
-@media (min-width: 480px) {
-  p {
-    text-align: justify;
-  }
-}
-
 @import "partial/header";
 @import "partial/post/actions_desktop";
 @import "partial/post/actions_mobile";
@@ -157,7 +148,7 @@ pre {
     border: 0;
     border-radius: 0 2px;
     padding: 0;
-    font-family: "JetBrains Mono", monospace;
+    font-family: "Sarasa Mono SC", monospace;
     font-weight: 800;
     font-size: 0.9em;
     line-height: 1.7;
