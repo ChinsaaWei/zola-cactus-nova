@@ -1,11 +1,21 @@
 <!doctype html>
-<html lang="{{ lang }}">
+<html lang="{{ lang }}" data-theme="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% block title %}{{ config.title }}{% endblock %}</title>
-  <link rel="stylesheet" href="{{ get_url(path='light.css') }}">
+  <link rel="stylesheet" href="{{ get_url(path='light.css') }}" id="theme-light">
+  <link rel="stylesheet" href="{{ get_url(path='dark.css') }}" id="theme-dark" disabled>
   <link rel="stylesheet" href="{{ get_url(path='lib/font-awesome/css/all.min.css') }}">
+  <script>
+    (function () {
+      var stored = localStorage.getItem("theme");
+      var dark = stored ? stored === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+      document.documentElement.dataset.theme = dark ? "dark" : "light";
+      document.getElementById("theme-light").disabled = dark;
+      document.getElementById("theme-dark").disabled = !dark;
+    })();
+  </script>
 </head>
 <body class="max-width mx-auto px3 ltr">
   <div class="content index py4">
@@ -15,5 +25,6 @@
     </main>
     {% include "partials/footer.html" %}
   </div>
+  <script src="{{ get_url(path='js/main.js') }}" defer></script>
 </body>
 </html>

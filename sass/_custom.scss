@@ -83,3 +83,34 @@
   -webkit-mask-image: url("/icons/matrix.svg");
   mask-image: url("/icons/matrix.svg");
 }
+
+#header {
+  position: relative;
+}
+
+#header #nav {
+  padding-right: 3rem;
+}
+
+#theme-toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.25rem;
+  border: 0;
+  background: none;
+  color: $color-text;
+  cursor: pointer;
+}
+
+#theme-toggle svg {
+  display: block;
+  width: 28px;
+  height: 28px;
+}
+
+html[data-theme="light"] #theme-toggle .moon,
+html[data-theme="dark"] #theme-toggle .sun {
+  display: none;
+}
+
