@@ -10,7 +10,7 @@ build_search_index = false
 theme = "catppuccin-mocha"
 
 [extra]
-description = "A minimal monospace theme for Zola."
+description = "A Cactus-like theme for Zola."
 copyright = "Cactus Nova"
 profile_avatar = "images/avatar.png"
 
@@ -24,5 +24,5 @@ socials = [
 ]
 
 friends = [
-  { name = "A friend", url = "https://example.org" },
+  { name = "My best friend", url = "https://example.org" },
 ]
