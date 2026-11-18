@@ -1,0 +1,12 @@
+name = "Cactus Nova"
+description = "A classic theme ported from Hexo Cactus"
+tags = ["cactus"]
+license = "MIT"
+min_version = "0.23.0"
+demo = ""
+
+[extra]
+
+[author]
+name = "Chinsaa"
+homepage = "https://chinsaa.dev"
