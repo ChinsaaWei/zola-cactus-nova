@@ -4,6 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% block title %}{{ config.title }}{% endblock %}</title>
+  {% if config.extra.favicon %}
+  <link rel="icon" href="{{ get_url(path=config.extra.favicon) }}">
+  {% elif config.extra.profile_avatar %}
+  <link rel="icon" href="{{ get_url(path=config.extra.profile_avatar) }}">
+  {% endif %}
   <link rel="stylesheet" href="{{ get_url(path='light.css') }}" id="theme-light">
   <link rel="stylesheet" href="{{ get_url(path='dark.css') }}" id="theme-dark" disabled>
   <link rel="stylesheet" href="{{ get_url(path='lib/font-awesome/css/all.min.css') }}">
