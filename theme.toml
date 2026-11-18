@@ -1,5 +1,5 @@
 name = "Cactus Nova"
-description = "A classic theme ported from Hexo Cactus"
+description = "A classic theme ported from Hugo Cactus"
 tags = ["cactus"]
 license = "MIT"
 min_version = "0.23.0"
