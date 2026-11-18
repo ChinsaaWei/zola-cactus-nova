@@ -1,0 +1,85 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.profile img {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+}
+
+.profile h1 {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+}
+
+.profile .intro {
+  margin: 0;
+  color: $color-meta;
+}
+
+.socials .icon {
+  display: inline-block;
+  margin: 0 0.15rem;
+  font-size: 1.75rem;
+  vertical-align: middle;
+}
+
+.friends {
+  margin-top: 1rem;
+}
+
+@media (min-width: 640px) {
+  .profile {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.profile h1 {
+  color: $color-text;
+  font-weight: 600;
+}
+
+.socials .icon svg {
+  width: 1em;
+  height: 1em;
+}
+
+#about h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+#about li {
+  margin-bottom: 0.75rem;
+}
+
+#about li:last-child {
+  margin-bottom: 0;
+}
+
+.icon-github,
+.icon-matrix {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-color: currentColor;
+  -webkit-mask: center / contain no-repeat;
+  mask: center / contain no-repeat;
+  vertical-align: middle;
+}
+
+.icon-github {
+  -webkit-mask-image: url("/icons/github.svg");
+  mask-image: url("/icons/github.svg");
+}
+
+.icon-matrix {
+  -webkit-mask-image: url("/icons/matrix.svg");
+  mask-image: url("/icons/matrix.svg");
+}

@@ -3,6 +3,31 @@
 {% block title %}Home · {{ config.title }}{% endblock %}
 
 {% block content %}
-<h1>{{ config.title }}</h1>
-<p>Hello from Cactus Nova.</p>
+{% if config.extra.profile_avatar %}
+<section class="profile">
+  <img src="{{ get_url(path=config.extra.profile_avatar) }}" alt="{{ config.title }}" width="96" height="96">
+  <div>
+    <h1>{{ config.title }}</h1>
+    {% if config.extra.description %}
+    <p class="intro">{{ config.extra.description | safe }}</p>
+    {% endif %}
+  </div>
+</section>
+{% endif %}
+
+<section id="about">
+  {{ section.content | safe }}
+</section>
+
+{% if config.extra.socials %}
+<p class="socials">Find me on
+  {% for item in config.extra.socials %}<a class="icon" href="{% if item.name == 'email' %}mailto:{{ item.url }}{% else %}{{ item.url | safe }}{% endif %}" target="_blank" rel="noopener" aria-label="{{ item.name }}">{% if item.name == "github" %}<span class="icon-github" aria-hidden="true"></span>{% elif item.name == "matrix" %}<span class="icon-matrix" aria-hidden="true"></span>{% elif item.name == "email" %}<i class="fas fa-envelope" aria-hidden="true"></i>{% elif item.name == "rss" %}<i class="fas fa-rss" aria-hidden="true"></i>{% else %}<i class="fab fa-{{ item.name }}" aria-hidden="true"></i>{% endif %}</a>{% endfor %}.
+</p>
+{% endif %}
+
+{% if config.extra.friends %}
+<p class="friends">Friends
+  {% for friend in config.extra.friends %}<a href="{{ friend.url | safe }}" target="_blank" rel="noopener">{{ friend.name }}</a>{% if not loop.last %}, {% endif %}{% endfor %}.
+</p>
+{% endif %}
 {% endblock %}
