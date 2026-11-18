@@ -1,0 +1,28 @@
+base_url = "https://example.com"
+title = "Cactus Nova"
+theme = "zola-cactus-nova"
+compile_sass = true
+build_search_index = false
+
+[markdown]
+
+[markdown.highlighting]
+theme = "catppuccin-mocha"
+
+[extra]
+description = "A minimal monospace theme for Zola."
+copyright = "Cactus Nova"
+profile_avatar = "images/avatar.png"
+
+menu = [
+  { name = "Home", url = "/" },
+]
+
+socials = [
+  { name = "github", url = "https://github.com/" },
+  { name = "matrix", url = "https://matrix.to/#/@you:example.org" },
+]
+
+friends = [
+  { name = "A friend", url = "https://example.org" },
+]
