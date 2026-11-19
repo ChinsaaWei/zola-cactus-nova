@@ -11,6 +11,9 @@
   {% endif %}
   <link rel="stylesheet" href="{{ get_url(path='light.css') }}" id="theme-light">
   <link rel="stylesheet" href="{{ get_url(path='dark.css') }}" id="theme-dark" disabled>
+  <link rel="preload" href="{{ get_url(path='fonts/SarasaMonoSC-Regular.woff2') }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ get_url(path='fonts/SarasaMonoSC-Bold.woff2') }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ get_url(path='dark.css') }}" as="style">
   <link rel="stylesheet" href="{{ get_url(path='lib/font-awesome/css/all.min.css') }}">
   <script>
     (function () {
