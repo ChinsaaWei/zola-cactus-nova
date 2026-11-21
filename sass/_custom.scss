@@ -118,3 +118,17 @@ html[data-theme="dark"] #theme-toggle .sun {
 .wordmark-meta {
   color: $color-meta;
 }
+
+@media (max-width: 480px) {
+  #header #nav {
+    display: block;
+    margin-top: 0.5rem;
+    padding-right: 0;
+  }
+
+  #header #nav ul li {
+    display: inline-block;
+    padding: 0;
+    font-size: 0.9rem;
+  }
+}
